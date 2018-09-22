@@ -11,6 +11,9 @@ app.get("/ping", (req, res) => {
 
 app.post("/todo-api/todo", todo.save);
 app.get("/todo-api/todo", todo.list);
+app.put("/todo-api/todo/:id", todo.update);
+app.delete("/todo-api/todo/:id", todo.remove);
+
 
 const PORT = process.env.PORT || 3000;
 
