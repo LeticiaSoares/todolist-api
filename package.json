@@ -1,0 +1,25 @@
+{
+  "name": "todolist-api",
+  "version": "1.0.0",
+  "description": "A simple TodoList API writen in Node with Express.js, saving to a private Mongo",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunoDM2943/todolist-api.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongo",
+    "todo"
+  ],
+  "author": "BrunoDM2943 <bdm2943@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrunoDM2943/todolist-api/issues"
+  },
+  "homepage": "https://github.com/BrunoDM2943/todolist-api#readme"
+}
