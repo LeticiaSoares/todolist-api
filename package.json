@@ -4,6 +4,7 @@
   "description": "A simple TodoList API writen in Node with Express.js, saving to a private Mongo",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "exit 0;"
   },
   "repository": {
@@ -21,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/BrunoDM2943/todolist-api/issues"
   },
-  "homepage": "https://github.com/BrunoDM2943/todolist-api#readme"
+  "homepage": "https://github.com/BrunoDM2943/todolist-api#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongodb": "^3.1.4"
+  }
 }
