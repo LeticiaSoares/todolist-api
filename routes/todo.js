@@ -62,11 +62,16 @@ function remove(req, res) {
     if(!validUser(user, res)){
         return
     }
-    db.collection("todo").findOneAndDelete({_id: ObjectID(id)},function(err,r) {
+    db.collection("todo").findOneAndDelete({_id: ObjectID(id), user: user},function(err,r) {
         if (err != null) {
             res.send(err);
         } else {
-            res.status(200).send({msg:"Deleted"});  
+            console.log(r)
+            if (!r.value) {
+                res.status(404).send();
+            } else {
+                res.status(200).send({msg:"Deleted"});
+            }
         }
     });
 }
