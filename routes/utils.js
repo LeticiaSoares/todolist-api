@@ -1,6 +1,8 @@
 function validateUser(req, res, next) {
     const user = getUser(req); 
-    if(!validUser(user, res)){
+    if(req.method == 'OPTIONS'){
+        next();   
+    } else if (!validUser(user, res)){
         return next('router')
     }
     next();
