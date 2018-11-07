@@ -1,4 +1,6 @@
 const todo = require("./routes/todo");
+const users = require("./routes/user");
+const utils = require("./routes/utils");
 const express = require('express');
 const app = express();
 
@@ -9,10 +11,13 @@ app.get("/ping", (req, res) => {
     res.send("pong");
 });
 
-app.post("/todo-api/todo", todo.save);
-app.get("/todo-api/todo", todo.list);
-app.put("/todo-api/todo/:id", todo.update);
-app.delete("/todo-api/todo/:id", todo.remove);
+app.use(utils.validateUser)
+app.post("/todo", todo.save);
+app.get("/todo", todo.list);
+app.put("/todo/:id", todo.update);
+app.delete("/todo/:id", todo.remove);
+app.post("/users", users.signUp);
+app.post("/users/login", users.login);
 
 
 const PORT = process.env.PORT || 3000;
