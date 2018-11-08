@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "efdc8908-3fc5-4866-bb24-adbc193e9ce8",
+		"name": "Todo list",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://lehtodoapi.herokuapp.com/ping",
+					"protocol": "https",
+					"host": [
+						"lehtodoapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Todo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user",
+						"value": "bdm",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://lehtodoapi.herokuapp.com/todo",
+					"protocol": "https",
+					"host": [
+						"lehtodoapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete TODO",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "user",
+						"value": "bdm",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://lehtodoapi.herokuapp.com/todo/5be2351be0469800167d7ad1",
+					"protocol": "https",
+					"host": [
+						"lehtodoapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo",
+						"5be2351be0469800167d7ad1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Todo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "user",
+						"type": "text",
+						"value": "bdm"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"TESTE 1\",\n\t\"desc\": \"TESTE DESC 1\"\n}"
+				},
+				"url": {
+					"raw": "https://lehtodoapi.herokuapp.com/todo/5be443c9a983f700164dff71",
+					"protocol": "https",
+					"host": [
+						"lehtodoapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo",
+						"5be443c9a983f700164dff71"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Todo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user",
+						"value": "bdm",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"TESTE\",\n\t\"desc\": \"TESTE DESC\"\n}"
+				},
+				"url": {
+					"raw": "https://lehtodoapi.herokuapp.com/todo",
+					"protocol": "https",
+					"host": [
+						"lehtodoapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignUP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "user",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"login\": \"test\",\n\t\"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "https://lehtodoapi.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"lehtodoapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "user",
+						"type": "text",
+						"value": "test"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"login\": \"test\",\n\t\"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "https://lehtodoapi.herokuapp.com/users/login",
+					"protocol": "https",
+					"host": [
+						"lehtodoapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
