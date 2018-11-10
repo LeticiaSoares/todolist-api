@@ -16,7 +16,7 @@ function signUp(req, res) {
 function login(req, res) {
     const db = mongo.getDb();
     const user = req.body;
-    db.collection(collection).findOne({"login": user.login, "password": user.password}, function(err,result) {
+    db.collection(collection).findOne({"email": user.email, "password": user.password}, function(err,result) {
         if (err != null) {
             res.send(err);
         } else if (result == null) {
