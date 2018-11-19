@@ -22,11 +22,10 @@ app.get("/ping", (req, res) => {
     res.send("pong");
 });
 
-app.use(utils.validateUser)
-app.post("/todo", todo.save);
-app.get("/todo", todo.list);
-app.put("/todo/:id", todo.update);
-app.delete("/todo/:id", todo.remove);
+app.post("/todo", todo.save, utils.validateUser);
+app.get("/todo", todo.list, utils.validateUser);
+app.put("/todo/:id", todo.update, utils.validateUser);
+app.delete("/todo/:id", todo.remove, utils.validateUser);
 app.post("/users", users.signUp);
 app.post("/users/login", users.login);
 
