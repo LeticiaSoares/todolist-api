@@ -20,7 +20,7 @@ function login(req, res) {
         if (err != null) {
             res.send(err);
         } else if (result == null) {
-            res.status(404).send();
+            res.status(404).send({msg:"Usuário não encontrado"});
         }else{
             res.status(200).send();  
         }

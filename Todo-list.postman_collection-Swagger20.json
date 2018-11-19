@@ -195,13 +195,6 @@
             "description": ""
           },
           {
-            "name": "user",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
             "name": "Body",
             "in": "body",
             "required": true,
@@ -225,20 +218,13 @@
         "tags": [
           "Misc"
         ],
-        "operationId": "UsersLoginPost",
+        "operationId": "LoginPost",
         "produces": [
           "application/json"
         ],
         "parameters": [
           {
             "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "user",
             "in": "header",
             "required": true,
             "type": "string",
@@ -306,32 +292,42 @@
     "SignUPRequest": {
       "title": "SignUPRequest",
       "example": {
-        "login": "test",
-        "password": "123456"
+        "email": "test@teste.com",
+        "password": "123456",
+        "name": "TESTE",
+        "phone": "12345678"
       },
       "type": "object",
       "properties": {
-        "login": {
+        "email": {
           "type": "string"
         },
         "password": {
           "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
         }
       },
       "required": [
-        "login",
-        "password"
+        "email",
+        "password",
+        "name",
+        "phone"
       ]
     },
     "LoginRequest": {
       "title": "LoginRequest",
       "example": {
-        "login": "test",
-        "password": "123456"
+        "email": "test@teste.com",
+        "password": "12345"
       },
       "type": "object",
       "properties": {
-        "login": {
+        "email": {
           "type": "string"
         },
         "password": {
@@ -339,7 +335,7 @@
         }
       },
       "required": [
-        "login",
+        "email",
         "password"
       ]
     }
