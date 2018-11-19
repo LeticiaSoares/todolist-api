@@ -1,6 +1,6 @@
 function validateUser(req, res, next) {
     const user = getUser(req); 
-    if(req.method == 'OPTIONS'){
+    if(req.method == 'OPTIONS' || req.path.includes("users")){
         next();   
     } else if (!validUser(user, res)){
         return next('router')
